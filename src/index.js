@@ -1,13 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Appscomp from './Appscomp';
+import Header from './header';
+import { Outlet, Link, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,Switch } from 'react-router-dom';
+import DataTable from './Table';
+import { MyForm } from './Appscomp';
+import { useState } from 'react';
 
+export default function Main(){
+  
+  
+ 
+return(<>
+
+  <BrowserRouter>
+           
+  <Routes>
+  <Route path="/" element={<Header/>}>
+  <Route path="/App" element={<App />} />
+ <Route path="/Appscomp" element={<Appscomp />} /> 
+ 
+ 
+  <Route path="/Table" element={<DataTable  />} />
+
+
+
+</Route>
+  </Routes>
+  </BrowserRouter>
+  </>
+);
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Main />
+   
   </React.StrictMode>
 );
 
