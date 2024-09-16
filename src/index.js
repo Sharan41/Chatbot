@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes,Switch } from 'react-router-dom'
 import DataTable from './Table';
 import { MyForm } from './Appscomp';
 import { useState } from 'react';
+import ChatbotApp from './chatbot';
 
 export default function Main(){
   
@@ -23,6 +24,8 @@ return(<>
   <Route path="/" element={<Header/>}>
   <Route path="/App" element={<App />} />
  <Route path="/Appscomp" element={<Appscomp />} /> 
+ <Route path="/chatbot" element={<ChatbotApp/>}/>
+ <Route path="/newapp" element={<newapp/>}/>
  
  
   <Route path="/Table" element={<DataTable  />} />
