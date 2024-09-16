@@ -72,7 +72,7 @@ async function fetchSalesData(query) {
 
 // Use Hugging Face API to query GPT-Neo
 const getLLMResponse = async (userQuery) => {
-    const API_URL = "https://api-inference.huggingface.co/models/EleutherAI/gpt-neo-2.7B";  
+    const API_URL = "https://api-inference.huggingface.co/models/EleutherAI/gpt-neo-2.7B";  // Updated NeoGPT model URL
     const headers = { "Authorization": `Bearer ${process.env.HUGGINGFACE_API_KEY}` };
 
     try {
@@ -175,4 +175,3 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-module.exports=app;

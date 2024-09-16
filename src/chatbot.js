@@ -17,7 +17,7 @@ function ChatbotApp() {
     setIsTyping(true);
 
     try {
-      const res = await axios.post('/api/chat', { userQuery: query, startDate, endDate });
+      const res = await axios.post('http://localhost:5001/api/chat', { userQuery: query, startDate, endDate });
       const newResponse = res.data.response;
 
       setChatHistory([...chatHistory, { query, response: newResponse }]);
@@ -34,7 +34,7 @@ function ChatbotApp() {
   // Fetch sales data from the API
   const fetchSalesData = async () => {
     try {
-      const res = await axios.post('/api/sales', { startDate, endDate });
+      const res = await axios.post('http://localhost:5001/api/sales', { startDate, endDate });
       const salesList = res.data.response;
       setSalesData(salesList);
     } catch (error) {
