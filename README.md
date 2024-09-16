@@ -1,70 +1,100 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Chatbot Project
 
-In the project directory, you can run:
+This project is a **Retail Chatbot** that allows users to query data, such as sales information, through a natural language interface. The application is built using the **MERN stack** (MongoDB, Express, React, Node.js) and can respond to user queries and display sales data based on a date range.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Project Setup](#project-setup)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Setup
 
-### `npm test`
+To set up the project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Ensure that you have **Node.js** and **npm** installed.
+- **MongoDB** should be running locally or you should have access to a remote MongoDB instance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Navigate to the `src/chatbot-backend` directory:
+   ```bash
+   cd src/chatbot-backend
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure the backend API:
+   - Create a `.env` file in the `chatbot-backend` folder and add the necessary environment variables (e.g., MongoDB URI).
+4. Start the backend server:
+   ```bash
+   npm start
+   ```
+   The backend should now be running on `http://localhost:5001`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend Setup
 
-### `npm run eject`
+1. Navigate to the `src/chatbot-frontend` directory:
+   ```bash
+   cd src/chatbot-frontend
+   ```
+2. Install the frontend dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the frontend development server:
+   ```bash
+   npm start
+   ```
+   The frontend should now be running on `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Full Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Make sure both the backend and frontend servers are running simultaneously.
+- Visit `http://localhost:3000` to interact with the chatbot.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Once the application is running:
 
-## Learn More
+1. You can ask the chatbot questions like: **"Fetch Sales Data (Sep10 to 11)"**.
+2. You can also specify date ranges using the date picker to get more specific sales data.
+3. The response and data will be displayed within the chatbot interface, including sales information for products within the specified date range.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Folder Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project is structured as follows:
 
-### Code Splitting
+```
+src/
+├── chatbot-frontend/       # Frontend code (React)
+├── chatbot-backend/        # Backend code (Node.js, Express)
+└── README.md               # This documentation file
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+We welcome contributions to this project! Here’s how you can contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Fork the repository.**
+2. **Create a new branch** for your feature or bug fix:
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. **Commit your changes:**
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. **Push to the branch:**
+   ```bash
+   git push origin feature-branch
+   ```
+5. **Create a pull request** and provide details about the changes you made.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
