@@ -18,7 +18,7 @@ const Header = () => {
          
                
           
-          <Nav.Link style={{color:'#d50025',fontWeight:'bold',fontSize:'25px',position:'absolute',left:'5px'}}><Link to="/chatbot">Chatbot UI</Link></Nav.Link>
+          <Nav.Link style={{fontWeight:'bold',right:'50px'}} ><Link to="/chatbot">Click here->Chatbot UI</Link></Nav.Link>
           
             </Nav>
           </Navbar.Collapse>
