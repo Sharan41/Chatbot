@@ -60,7 +60,7 @@ function ChatbotApp() {
                 <Form onSubmit={handleSubmit}>
                   <InputGroup className="mb-3">
                     <Form.Control
-                      placeholder="Ask a question...eg:Fetch Sales Data(Sep10 to 11)"
+                      placeholder="Ask a question...eg:Fetch Sales Data"
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
                       required
@@ -75,11 +75,9 @@ function ChatbotApp() {
                     <Col>
                       <Form.Control
                         type="date"
-                        placeholder="Start Date"
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value)}
-                        required
-                        
+                        placeholder="Start Date"
                       />
                     </Col>
                     <Col>
@@ -88,7 +86,6 @@ function ChatbotApp() {
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value)}
                         placeholder="End Date"
-                        required
                       />
                     </Col>
                   </Row>
@@ -104,7 +101,7 @@ function ChatbotApp() {
 
                 {/* Fetch Sales Data Button */}
                 <Button className="mt-3" variant="secondary" onClick={fetchSalesData}>
-                  Display Data
+                  Fetch Sales Data
                 </Button>
 
                 {/* Display Sales Data Table */}

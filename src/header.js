@@ -18,7 +18,7 @@ const Header = () => {
          
                
           
-          <Nav.Link><Link to="/chatbot">Chatbot UI</Link></Nav.Link>
+          <Nav.Link ><Link to="/chatbot">Chatbot UI</Link></Nav.Link>
           
             </Nav>
           </Navbar.Collapse>
